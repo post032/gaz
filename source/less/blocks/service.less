@@ -1,0 +1,111 @@
+.service {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service__title {
+  font-size: 40px;
+  font-weight: bold;
+  color: @text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service__lists {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.service__list {
+  width: 227px;
+  min-height: 326px;
+  border: 1px solid #c5cbd4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.service__icon {
+  background: url("../img/spritCSS.png") no-repeat;
+  margin-top: 40px;
+}
+
+.service__battery {
+  width: 94px;
+  height: 82px;
+  background-position: -146px -5px;
+}
+
+.service__crane {
+  width: 77px;
+  height: 97px;
+  background-position: -5px -83px;
+}
+
+.service__ventilation {
+  width: 84px;
+  height: 84px;
+  background-position: -193px -286px;
+}
+
+.service__home {
+  width: 85px;
+  height: 100px;
+  background-position: -92px -166px;
+}
+
+.service__lightning {
+  width: 101px;
+  height: 110px;
+  background-position: -217px -166px;
+}
+
+.service__shield {
+  width: 82px;
+  height: 82px;
+  background-position: -328px -194px;
+}
+
+.service__text {
+  font-size: 17px;
+  line-height: 21px;
+  color: #54b6d1;
+  width: 150px;
+  text-align: center;
+}
+
+.service__button {
+  font-size: 16px;
+  line-height: 21px;
+  color: #54b6d1;
+  width: 160px;
+  height: 40px;
+  border: 1px solid #54b6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+}
+
+@media (min-width: @size-tablet) {
+  .service__lists {
+    max-width: 820px;
+  }
+}
+@media (min-width: @size-desktop) {
+
+}

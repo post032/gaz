@@ -1,0 +1,161 @@
+.nav-open {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-hide {
+  display: none;
+}
+
+.nav-show {
+  display: flex;
+}
+
+.nav-open:focus {
+  outline: none;
+}
+
+.nav-open span {
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  right: 3px;
+  height: 4px;
+  background: #206284;
+}
+
+.nav-open span::after,
+.nav-open span::before {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #206284;
+  content: "";
+}
+
+.nav-open span::before {
+  top: -8px;
+}
+
+.nav-open span::after {
+  bottom: -8px;
+}
+
+.nav-open--htx {
+  background-color: #ffffff;
+}
+
+.nav-open--htx span {
+  transition: background 0s 0.3s;
+}
+
+.nav-open--htx span::after,
+.nav-open--htx span::before {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.nav-open--htx span::before {
+  transition-property: top, transform;
+}
+
+.nav-open--htx span::after {
+  transition-property: bottom, transform;
+}
+/* состояние active при открытом меню  */
+.nav-open--htx.is-active {
+  background-color: #ffffff;
+}
+
+.nav-open--htx.is-active span {
+  background: none;
+}
+
+.nav-open--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-open--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.nav-open--htx.is-active span::after,
+.nav-open--htx.is-active span::before {
+  transition-delay: 0s, 0.3s;
+}
+
+.nav__background {
+  background-color: #54b6d1;
+}
+
+.nav {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav__lists {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Roboto bold", sans-serif;
+}
+@media (min-width: @size-tablet) {
+  .nav-open {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav__lists {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav__link {
+    font-size: 12px;
+  }
+}
+@media (min-width: @size-desktop) {
+  .nav__lists {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

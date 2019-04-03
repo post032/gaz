@@ -1,0 +1,205 @@
+.comments {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments__title {
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+  font-family: "Roboto bold", sans-serif;
+  color: @text;
+}
+
+.comments__lists {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 850px;
+  justify-content: center;
+}
+
+.comments__item,
+.comments__list {
+  width: 300px;
+  border: 1px solid #c5cbd4;
+  position: relative;
+  margin-top: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.comments__list {
+  min-height: 533px;
+  align-items: center;
+}
+
+.comments__item {
+  height: 342px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 5px 0 rgba(0,0,0,0.1);
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.comments__text {
+  color: #54b6d1;
+  font-size: 13px;
+  line-height: 25px;
+  font-family: "open sans";
+  text-align: center;
+  margin-top: 120px;
+  width: 250px;
+  min-height: 300px;
+}
+
+.comments__element,
+.comments__name {
+  color: #405371;
+  line-height: 25px;
+  font-family: "open sans semibold";
+  text-align: center;
+}
+
+.comments__name {
+  font-size: 15px;
+}
+
+.comments__element {
+  font-size: 13px;
+}
+
+.comments__img {
+  width: 207px;
+  height: 207px;
+  position: absolute;
+  top: -103px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.comments__toggle-item,
+.comments__toggle-list {
+  background: url("../img/spritCSS.png") no-repeat;
+  width: 73px;
+  height: 60px;
+  background-position: -5px -5px;
+  border: none;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.comments__toggle-list {
+  top: 820px;
+}
+
+.comments__toggle-item {
+  top: 1280px;
+}
+
+.comments__hide {
+  display: none;
+}
+
+.comments__video {
+  width: 300px;
+  height: 219px;
+  border-radius: 20px;
+  background-color: #dfdfdf;
+}
+
+.comments__video-play::before {
+  content: "";
+  display: block;
+  background-image: url("../img/spritCSS.png");
+  background-repeat: no-repeat;
+  width: 73px;
+  height: 73px;
+  background-position: -332px -111px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+}
+
+.comments__video-name {
+  font-size: 27px;
+  line-height: 25px;
+  color: @text;
+  font-family: "Proxima Nova Semibold";
+  margin: 0 0 0 40px;
+}
+
+.comments__video-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.comments__video-city {
+  font-size: 21px;
+  font-family: "Proxima Nova";
+  margin: 0;
+}
+
+.comments__video-data {
+  font-size: 15px;
+  font-family: "Proxima Nova light";
+  margin: 0;
+}
+@media (min-width: @size-tablet) {
+  .comments__lists {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .comments__hide {
+    display: flex;
+  }
+
+  .comments__toggle-list {
+    top: 770px;
+  }
+
+  .comments__toggle-item {
+    top: 1230px;
+  }
+}
+@media (min-width: @size-desktop) {
+  .comments__item,
+  .comments__list {
+    width: 330px;
+  }
+
+  .comments__video {
+    width: 324px;
+  }
+
+  .comments__toggle-item,
+  .comments__toggle-list {
+    right: 5%;
+  }
+
+  .comments__toggle-list {
+    top: 400px;
+  }
+
+  .comments__toggle-item {
+    top: 950px;
+  }
+
+  .comments__item,
+  .comments__list {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+}
